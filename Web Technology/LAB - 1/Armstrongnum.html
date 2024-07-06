@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrongnum</title>
+</head>
+<body>
+    <script>
+        n = parseInt(prompt('Enter a number:'))
+        temp = n;
+        temp1 = n;
+        count = 0;
+        ans = 1;
+        arm = 0;
+       
+        while(n!=0){
+            n = parseInt(n/10)
+            count++;
+        }
+        len = count+1;
+        
+        while(temp>0){
+            r = temp % 10;
+
+            for(j=1;j<len;j++){
+                ans = ans*r;
+            }
+
+            arm = arm + ans;
+            ans = 1;
+            temp = parseInt(temp/10);
+        }
+        
+        if(temp1==arm){
+            document.write(temp1+' is armstrong num')
+        }
+        else{
+            document.write(temp1+' is not armstrong num')
+        }
+
+    </script>
+</body>
+</html>
