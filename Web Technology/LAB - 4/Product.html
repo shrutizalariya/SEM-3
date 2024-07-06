@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+</head>
+<body>
+    <script>
+        Product = [
+            {
+                Name : 'Potato Waffer',
+                Price : 30,
+                Pac_date : '23-12-2023',
+                Exp_date: '23-12-2025',
+                Weigth : '500 gm'
+            },
+            {
+                Name : 'Tomato Waffer ',
+                Price : 40,
+                Pac_date : '2-11-2024',
+                Exp_date : '3-12-2026',
+                Weigth : '400 gm'
+            },
+            {
+                Name : 'Milk Powder',
+                Price : 50,
+                Pac_date : '9-8-2022',
+                Exp_date : '8-9-2024',
+                Weigth : '100 gm'
+            },
+            {
+                Name : 'Coco Powder',
+                Price : 60,
+                Pac_date : '6-5-2023',
+                Exp_date : '5-6-2025',
+                Weigth : '85 gm'
+            },
+            {
+                Name : 'Dairy Milk',
+                Price : 200,
+                Pac_date : '12-2-2021',
+                Exp_date : '22-3-2024',
+                Weigth : '150 gm'
+            },
+            {
+                Name : 'Rumbbles',
+                Price : 20,
+                Pac_date : '6-3-2022',
+                Exp_date : '3-5-2025',
+                Weigth : '50 gm'
+            }
+        ]
+
+        document.write('<table border=1>');
+            document.write('<tr align=center>');
+                    document.write('<td><b>Product Name</b></td>');
+                    document.write('<td><b>Price</b></td>');
+                    document.write('<td><b>Pac_Date</b></td>');
+                    document.write('<td><b>Exp_Date</b></td>');
+                    document.write('<td><b>Weight</b></td>');
+                document.write('</tr>');
+            for(i=0;i<Product.length;i++){
+                document.write('<tr align=center>');
+                    document.write('<td>'+Product[i].Name+'</td>');
+                    document.write('<td>'+Product[i].Price+'</td>');
+                    document.write('<td>'+Product[i].Pac_date+'</td>');
+                    document.write('<td>'+Product[i].Exp_date+'</td>');
+                    document.write('<td>'+Product[i].Weigth+'</td>');
+                document.write('</tr>');
+            }
+            document.write('</table>');
+    </script>
+</body>
+</html>

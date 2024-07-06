@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dif_Function</title>
+</head>
+<body>
+    <script>
+        var a = [2,5,7,3,4,1,6];
+
+        //For Sorting Of Array
+        a.sort();
+        document.write('1.Sort :'+a);
+
+        document.write('<br><br>');
+
+        //For Add Element In Array At The End
+        a.push(8);
+        document.write('2.Push :'+a);
+
+        document.write('<br><br>');
+
+        //For Delete The Element At The End
+        a.pop();
+        document.write('3.Pop :'+a);
+
+        document.write('<br><br>');
+
+        //For Add Element In Array At Starting 
+        a.unshift(0);
+        document.write('4.Unshift :'+a);
+
+        document.write('<br><br>');
+
+        //For Delete The Element In Array At Starting
+        a.shift();
+        document.write('5.Shift :'+a);
+
+        document.write('<br><br>');
+
+        //For SubArray(Ending index is not considered)
+        b = a.slice(2,5);//(Starting Index,Ending Index)
+        document.write('6.slice :'+b);
+
+        document.write('<br><br>');
+
+        //For Delete Element In The Given Array
+        a.splice(2,4);//(Staring index,Number of elements which you want to delete it)
+        document.write('7.Splice :'+a);
+
+      
+    </script>
+</body>
+</html>
