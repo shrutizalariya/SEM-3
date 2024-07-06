@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>BubbleSort</title>
+</head>
+<body>
+	<script type="text/javascript">
+		n = parseInt(prompt('Enter a length of array:'))
+		let arr = new Array();
+
+		for(i=0;i<n;i++){
+			arr[i] = parseInt(prompt('Enter arr['+i+']:'))
+		}
+
+		for(i=0;i<n;i++){
+			for(j=0;j<n-i;j++){
+				if(arr[j]>arr[j+1]){
+					temp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = temp;
+				}
+			}
+		}
+
+		document.write(arr);
+
+	</script>
+</body>
