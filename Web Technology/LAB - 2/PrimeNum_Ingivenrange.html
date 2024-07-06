@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primenum</title>
+</head>
+<body>
+    <script>
+        n = parseInt(prompt('Enter strating num:'))
+        m = parseInt(prompt('Enter ending num:'))
+
+        document.write('Prime num between '+n+' and '+m+' = ')
+        for(i=n;i<=m;i++){
+            flag = 0;
+            for(j=2;j<i/2;j++){
+                if(i%j==0){
+                    flag=1;
+                }
+            }
+            if(flag==0){
+                document.write(i+' ')
+            }
+        }
+     
+    </script>
+</body>
+</html>
