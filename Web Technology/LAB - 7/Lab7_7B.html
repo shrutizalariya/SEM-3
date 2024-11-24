@@ -1,0 +1,87 @@
+ <!-- Demonstrate the Arrow functions.  -->
+
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Arrow Functions
+	</title>
+</head>
+<body>
+	<script type="text/javascript">
+        
+		 a=[10,20,30,40,50];
+
+		 b=[
+		 	{
+		 		name:'abc',
+		 		rollNo:222,
+		 		sem:4
+		 	},
+		 	{
+		 		name:'xyz',
+		 		rollNo:223,
+		 		sem:3
+		 	},
+		 	{
+		 		name:'pqr',
+		 		rollNo:224,
+		 		sem:5
+		 	}
+
+		 	];
+
+
+		 //find method
+
+		// ans=a.find((data)=>{
+		// 	if(data==10){
+		// 		return true;
+		// 	}
+		// 	else{
+		// 		return false;
+		// 	}
+		// })
+		// console.log(ans);
+
+
+		 //filter method
+
+		ans=a.filter((data)=>{
+			if(data>10){
+				return true;
+			}
+			else{
+				return false;
+			}
+		})
+		console.log(ans);
+
+		//some method
+		ans=a.some(()=>{
+			if(b[0].sem=4){
+				return true;
+			}
+			else{
+				return false;
+			}
+		})
+		console.log(ans);
+
+		//every method
+		ans=a.every(()=>{
+			if(b[0,1,2].sem=3){
+				return true;
+			}
+			else{
+				return false;
+			}
+		})
+		console.log(ans);
+
+	</script>
+
+</body>
+</html>

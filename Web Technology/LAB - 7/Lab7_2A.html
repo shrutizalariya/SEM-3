@@ -1,0 +1,27 @@
+<!-- Demonstrate the difference between let and var. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let var const</title>
+</head>
+<body>
+    
+    <script>
+        var a = 25;
+        abc();
+        console.log(a);
+        function abc(){
+            var a=20;
+            if(true){
+                let a = 30;
+                console.log(a);
+            }
+            console.log(a);
+        }
+    </script>
+
+</body>
+</html>

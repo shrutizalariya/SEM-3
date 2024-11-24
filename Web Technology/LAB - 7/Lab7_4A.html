@@ -1,0 +1,31 @@
+<!-- Demonstrate the spread operator.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread</title>
+</head>
+<body>
+    
+    <script>
+        let a = [
+            {name:'riya',rollno:101},
+            {name:'shruti',rollno:102},
+            {name:'nandani',rollno:103}
+        ];
+        let b = [...a,10,20];
+        console.log(b);
+
+        let c = {
+            name:'riya',
+            dept:'CSE',
+            sem:3
+        };
+        d = {...c,xyz:'xyz'};
+        console.log(d);
+    </script>
+
+</body>
+</html>
