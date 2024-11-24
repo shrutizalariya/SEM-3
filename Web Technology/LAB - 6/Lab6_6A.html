@@ -1,0 +1,86 @@
+<!-- WAP to prepare student registration form and validate it using JavaScript. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h2 align="center">Student Registration Form</h2>
+    <form id="registrationForm" align="center">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <span class="error" id="nameError"></span>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <span class="error" id="emailError"></span>
+        <br><br>
+
+        <label for="phone">Mobile No:</label>
+        <input type="text" id="phone" name="phone">
+        <span class="error" id="phoneError"></span>
+        <br><br>
+
+        <label for="enrollment">Enrollment No:</label>
+        <input type="text" id="enrollment" name="enrollment">
+        <span class="error" id="enrollment"></span>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <span class="error" id="passwordError"></span>
+        <br><br>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword">
+        <span class="error" id="confirmPasswordError"></span>
+        <br><br>
+
+        <input type="button" value="Register" onclick="validateForm()">
+    </form>
+
+    <script>
+
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let phone = document.getElementById('phone').value;
+            let enrollment = document.getElementById('enrollment').value;
+            let password = document.getElementById('password').value;
+            let confirmPassword = document.getElementById('confirmPassword').value;
+
+        function validateForm(){
+            let NamePattern = /^[a-zA-Z0-9]{8,}$/;
+            let PasswordPattern = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*]){8,12}&/;
+            let PhonePattern = /^[0-9]{10}$/;
+            let EnrollmentPattern = /^2301[0-9]{7}$/;
+            let EmailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if(!NamePattern.test(name)){
+            alert("Username is not valid (username must be of minimum 8 characters)");
+            }
+            if(!PasswordPattern.test(password)){
+                alert("Password is not valid (password must contain at least 1 digit and 1 special character and should be between 8 to 12 characters)")
+            }
+            if(!PhonePattern.test(phone)){
+                alert("Mobile Number is not valid");
+            }
+            if(password!==confirmpassword){
+                alert("Passwords are not match !!");
+            }
+            if(!EnrollmentPattern.test(enrollment)){
+                alert("Enrollment Number is not valid ")
+            }
+            if(!EmailPattern.test(email)){
+                alert("Email Address is not valid ");
+            }
+        }
+    </script>
+</body>
+</html>

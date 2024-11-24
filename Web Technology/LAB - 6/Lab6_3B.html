@@ -1,0 +1,31 @@
+<!-- WAP to recognize which keyboard event is ƒired. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Event</title>
+</head>
+<body>
+    
+    <input onkeypress="keyPress()" type="button">Key Press
+    <br><br>
+    <input onkeyup="keyUp()" type="button">Key Up
+    <br><br>
+    <input onkeydown="keyDown()" type="button">Key Down
+
+    <script>
+        function keyPress(){
+            alert("Key Pressed");
+        }
+        function keyUp(){
+            alert("Up Key Pressed");
+        }
+        function keyDown(){
+            alert("Down Key Pressed");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- WAP to change background color on click of button.  -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <!-- <button onclick="change()">Change</button>
+    <script>
+        function change() {
+            // for static colour
+            // document.body.style.background='rgb(228, 161, 192)';
+
+            //for automatically random colours
+            // let a=Math.ceil(Math.random()*255);
+            // let b=Math.ceil(Math.random()*255);
+            // let c=Math.ceil(Math.random()*255);
+            // document.body.style.background="rgb("+a+","+b+","+c+")";
+        }
+    </script> -->
+
+
+<button onclick="Start()">Start</button>
+<button onclick="Stop()">Stop</button>
+    <script>
+        function Change() {
+            let a=Math.ceil(Math.random()*255);
+            let b=Math.ceil(Math.random()*255);
+            let c=Math.ceil(Math.random()*255);
+            document.body.style.background="rgb("+a+","+b+","+c+")";
+        }
+        
+        function Start(){
+            a=setInterval(Change,100);
+        }
+        function Stop(){
+            clearInterval(a);
+        }
+    </script>
+ </body>
+ </html>

@@ -1,0 +1,35 @@
+<!-- WAP to demonstrate change in properties of HTML element using JavaScript. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Properties of HTML Element</title>
+    <style>
+        #myElement {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Change Properties of HTML Element</h1>
+    <div id="myElement">Box</div>
+    <br>
+    <button onclick="changeProperties()">Change Properties</button>
+
+    <script>
+        function changeProperties() {
+            const element = document.getElementById('myElement');
+            element.style.width = '200px';
+            element.style.height = '200px';
+            element.style.backgroundColor = 'blue';
+            element.style.color = 'yellow';
+            element.textContent = 'Changed!';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!-- WAP to perform CRUD operation on Array using HTML and JavaScript. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+</head>
+<body>
+    
+    <input type="text" id="name">
+    <button id="add/edit" onclick=add()>Add</button>
+    <div id="disarea"></div>
+
+    <script>
+            let btn1 = document.getElementById('add/edit');
+            btn1.innerHTML = 'Add';
+            var arr=[];
+            var index;
+        function add() {
+            if (btn1.innerHTML == "Add") {
+                arr.push(document.getElementById('name').value);
+                document.getElementById('name').value="";
+                display();
+            }
+            else{
+                let name = document.getElementById('name');
+                arr[index] = name.value;
+                document.getElementById('name').value="";
+                display();
+                btn1.innerHTML = "Add";
+            }
+        }
+        function edit(i) {
+            let name = document.getElementById('name');
+            name.value = arr[i];
+            btn1.innerHTML = "Edit";
+            index = i;
+        }
+        function del(i){
+            arr.splice(i,1);
+            display();
+        }
+        function display(){
+            let dis = document.getElementById('disarea');
+                dis.innerHTML = '';
+            for (let i = 0; i < arr.length; i++) {
+                dis.innerHTML += arr[i]+
+                "<button onclick='del("+i+")'>Delete</button>" +
+                "<button onclick='edit("+i+")'>Edit</button>" +
+                "</br>";
+                
+            }
+        }
+    </script>
+
+</body>
+</html>
