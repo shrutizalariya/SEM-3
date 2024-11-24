@@ -1,0 +1,94 @@
+<!-- WAP to create a basic graphical Calculator using HTML and JavaScript.  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Calculator
+	</title>
+	<style type="text/css">
+        
+		.button{
+			background-color: rgb(228, 161, 192);
+			/*border: 1px solid black;*/
+			width: 40px;
+			height: 40px;
+		}
+
+		.button1{
+			background-color: rgb(228, 161, 192);
+			/*border: 1px solid black;*/
+			width: 100%;
+			height: 85px;
+		}
+
+	</style>
+</head>
+<body>
+	<table border="1px solid balck">
+<tr>
+	<td colspan="6"><input type="text" id="MyText" style="background: rgb(228, 161, 192); ; width: 259px;color: black" ></td>
+</tr>
+	
+<tr>
+	<td><button class="button" onclick="dis('7')">7</button></td>
+	<td><button class="button" onclick="dis('8')">8</button></td>
+	<td><button class="button" onclick="dis('9')">9</button></td>
+	<td><button class="button" onclick="dis('*')">*</button></td>
+	<td><button class="button" onclick="dis('/')">/</button></td>
+	<td><button class="button" onclick="dis('%')">%</button></td>
+
+
+</tr>
+	
+<tr>
+	<td><button class="button" onclick="dis('4')">4</button></td>
+	<td><button class="button" onclick="dis('5')">5</button></td>
+	<td><button class="button" onclick="dis('6')">6</button></td>
+	<td><button class="button" onclick="dis('-')">-</button></td>
+	<td><button class="button" onclick="equal('=')">=</button></td>
+	<td><button class="button" onclick="dis('^')">^</button></td>
+</tr>
+
+<tr>
+	<td><button class="button" onclick="dis('3')">3</button></td>
+	<td><button class="button" onclick="dis('2')">2</button></td>
+	<td><button class="button" onclick="dis('1')">1</button></td>
+	<td rowspan="2"><button class="button1" onclick="dis('+')">+</button>
+	<td><button class="button" onclick="Back('B')">B</button></td>
+	<td><button class="button" onclick="dis('(')">(</button></td>
+
+</tr>
+ 	
+
+<tr>
+	<td><button class="button" onclick="dis('0')">0</button></td>
+	<td><button class="button" onclick="dis('00')">00</button></td>
+	<td><button class="button" onclick="dis('.')">.</button></td>
+	<td><button class="button" onclick="allclear('C')">C</button></td>
+	<td><button class="button" onclick="dis(')')">)</button></td>
+</tr>
+</table>
+   
+<script >
+	let a = document.getElementById("MyText");
+
+
+	function dis(value){
+		a.value+=value;
+	}
+	function equal(){
+		a.value=eval(a.value);
+	}
+	function allclear(){
+		a.value=' ';
+	}
+
+    function Back(){
+        a.value=(a.value).slice(0,(a.value).length-1);
+    }
+	
+</script>
+  
+</body>
+</html>
